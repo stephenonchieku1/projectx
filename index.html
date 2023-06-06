@@ -5,13 +5,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
     </head>
     <body>
         <div class="grid-container">
             <header class="header">
                 
             </header>
-            <aside id="sidebar">
+            <aside class="sidebar">
+                <div class="sidebar-title">
+                    <div class="sidebar-brand">
+                      Net Doc Accounting
+                    </div>
+                    <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+                  </div>
+                <ul>
+                    <li class="sidebar-list-item"><a href="#"><img src="images/home.jpg" alt="Icon 1">Dashboard</a></li>
+                    <li class="sidebar-list-item"><a href="#"><img src="images/Expenses.jpg" alt="Icon 1"> Expenses</a></li>
+                    <li class="sidebar-list-item"><a href="#"><img src="images/revenue.jpg" alt="Icon 2"> Revenue</a></li>
+                    <li class="sidebar-list-item"><a href="#"><img src="images/bag.png" alt="Icon 3"> Taxes</a></li>
+                    <li class="sidebar-list-item"><a href="#"><img src="images/setting.jpeg" alt="Icon 3"> Settings</a></li>
+                </ul>
 
             </aside>
             <main class="main-container" id="main">
