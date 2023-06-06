@@ -3,7 +3,7 @@ body {
     padding: 0;
     background-color: #FDF9F9;;
     color: #9e9ea4;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Inter';
   }
   .grid-container {
     display: grid;
@@ -23,13 +23,77 @@ body {
     padding: 0 30px 0 30px;
     box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
   }
-  #sidebar {
+  .sidebar {
     grid-area: sidebar;
-    height: 100%;
-    background-color: #FDF9F9;
+    background-color: #f2f2f2;
+    height: 100%;   
     overflow-y: auto;
     transition: all 0.5s;
-    box-shadow: 0 6px 7px -3px rgba( 0, 0, 0.35);
     -webkit-transition: all 0.5s;
+     }
+
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding:0;
+    margin: 15px;
+  }
+    .sidebar-list-item {
+    padding: 20px 20px 20px 20px;
+    font-size: 18px;
+  }
+  .sidebar-list-item > a {
+    text-decoration: none;
+    color: #9e9ea4;
+  }
+  .sidebar-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+
+  .sidebar-responsive {
+    display: inline !important;
+    position: absolute;   
+    z-index: 12 !important;
+  }
+ 
+  
+  .sidebar li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
   }
   
+  .sidebar li a img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .sidebar li:first-child a {
+    color:#2CB629;
+    position: relative;
+    font-weight: 800;  
+    font-size: 20px;   
+    line-height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+  }
+ .sidebar-brand{
+    width:157px;
+    height: 30px;
+    position:relative;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-weight: 900;
+    font-size: large;
+    color: #000000;
+    display: inline-block;
+ }
+ .sidebar-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+    padding: 30px,30px,30px,30px;
+ }
