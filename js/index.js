@@ -55,7 +55,7 @@ var areaChartOptions = {
       data: [11, 32, 45, 32, 34, 52, 41]
     }],
     chart: {
-      height: 350,
+      height:500,
       type: 'line',
       toolbar: {
         show: false,
@@ -110,7 +110,8 @@ var areaChartOptions = {
       breakpoint: 480,
       options: {
         chart: {
-          width: 200
+          width:200,
+        
         },
         legend: {
           position: 'bottom'
