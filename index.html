@@ -30,11 +30,58 @@
 
             </aside>
             <main class="main-container" id="main">
+             <div class="main-cards">
+
+                <div class="card">
+                   <div class="card-inner">
+                    <h3> TOTAL INCOME</h3>
+                   </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>TOTAL EXPENSE</h3>
+                    </div>
+                 </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>TOTAL SAVINGS</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>MOST SPENDING</h3>
+                    </div>
+                 </div>                 
+             </div>
+
+             <div class="charts">
+
+              <div class="charts-card">
+                <h2 class="chart-title">Top 5 Expense Source</h2>
+                <div id="bar-chart"></div>
+              </div>
+              <div class="charts-card">
+                  <h2 class="chart-title">Recent Expenses</h2>
+                  <div id="expenses-card"></div>
+                </div>
+                <div class="charts-card">
+                  <h2 class="chart-title">Report Overview</h2>
+                  <div id="pie-chart"></div>
+                </div>
+    
+              <div class="charts-card">
+                <h2 class="chart-title">Expense Activity</h2>
+                <div id="area-chart"></div>
+              </div>
+    
+            </div>
 
             </main>
         </div>
         
-            
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     
        <script src="js/index.js"></script>
     </body>
