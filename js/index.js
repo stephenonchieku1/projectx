@@ -95,8 +95,8 @@ var areaChartOptions = {
   areaChart.render();
   // donut chart
   const chartData = {
-    series: [44, 55, 13, 43, 22],
-    labels: ['Apple', 'Banana', 'Cherry', 'Orange', 'Mango']
+    series: [44, 55, 13],
+    labels: ['Expenses', 'Income', 'Savings']
   };
 
   // Options for the chart
