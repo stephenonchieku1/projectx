@@ -1,93 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Net Doc Accounting</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Net Doc Accounting</title>
 
-    </head>
-    <body>
-        <div class="grid-container">
-            <header class="header">
-              <div class="heder-left"></div>
-              <div class="header-right">
-
-                 <span class="material-icons-outlined">notifications</span>
-              </div>
-                
-            </header>
-            <aside class="sidebar">
-                <div class="sidebar-title">
-                    <div class="sidebar-brand">
-                      Net Doc Accounting
-                    </div>
-                    <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
-                  </div>
-                <ul>
-                    <li class="sidebar-list-item"><a href="#"><img src="images/home.jpg" alt="Icon 1">Dashboard</a></li>
-                    <li class="sidebar-list-item"><a href="#"><img src="images/Expenses.jpg" alt="Icon 1"> Expenses</a></li>
-                    <li class="sidebar-list-item"><a href="#"><img src="images/revenue.jpg" alt="Icon 2"> Revenue</a></li>
-                    <li class="sidebar-list-item"><a href="#"><img src="images/bag.png" alt="Icon 3"> Taxes</a></li>
-                    <li class="sidebar-list-item"><a href="#"><img src="images/setting.jpeg" alt="Icon 3"> Settings</a></li>
-                </ul>
-
-            </aside>
-            <main class="main-container" id="main">
-             <div class="main-cards">
-
-                <div class="card">
-                   <div class="card-inner">
-                    <h3> TOTAL INCOME</h3>
-                   </div>
-
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>TOTAL EXPENSE</h3>
-                    </div>
-                 </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>TOTAL SAVINGS</h3>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>MOST SPENDING</h3>
-                    </div>
-                 </div>                 
-             </div>
-
-             <div class="charts">
-
-              <div class="charts-card">
-                <h2 class="chart-title">Top 5 Expense Source</h2>
-                <div id="bar-chart"></div>
-              </div>
-              <div class="charts-card">
-                  <h2 class="chart-title">Recent Expenses</h2>
-                  <div id="expenses-card"></div>
-                </div>
-                <div class="charts-card">
-                  <h2 class="chart-title">Report Overview</h2>
-                  <div id="donut-chart"></div>
-                </div>
     
-              <div class="charts-card">
-                <h2 class="chart-title">Expense Activity</h2>
-                <div id="area-chart"></div>
-              </div>
-    
-            </div>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
-            </main>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
         </div>
+        <div class="header-left">
+        </div>
+        <div class="header-centre">
+          <div class="datalist-wrap">
+            <div class="input-wrap">    
+              <input id="period" type="text" name="period" list="period"/>
+              <button id="caret"> &#9660;</button>
+            </div>                    
+          </div>   
+        </div>    
+      
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>   
         
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    
-       <script src="js/index.js"></script>
-    </body>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar">
+        <div class="sidebar-title">
+            <div class="sidebar-brand">
+              Net Doc Accounting
+            </div>
+            <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+          </div>
+        <ul class="sidebar-menu-items">
+            <li class="sidebar-list-item"><a href="#"><img src="images/home.png" alt="Icon 1">Dashboard</a></li>
+            <li class="sidebar-list-item"><a href="#"><img src="images/business-and-finance.png" alt="Icon 1"> Revenuees</a></li>
+            <li class="sidebar-list-item"><a href="#"><img src="images/budget.png" alt="Icon 2">Expenses</li>
+            <li class="sidebar-list-item"><a href="#"><img src="images/bag.png" alt="Icon 3"> Taxes</a></li>
+            <li class="sidebar-list-item"><a href="#"><img src="images/settings.png" alt="Icon 3"> Settings</a></li>
+        </ul>
+
+    </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container" id="main">
+        <div class="main-cards">
+
+           <div class="card">
+              <div class="card-inner">
+               <h3> TOTAL INCOME</h3>
+              </div>
+
+           </div>
+
+           <div class="card">
+               <div class="card-inner">
+                   <h3>TOTAL EXPENSE</h3>
+               </div>
+            </div>
+           <div class="card">
+               <div class="card-inner">
+                   <h3>TOTAL SAVINGS</h3>
+               </div>
+           </div>
+           <div class="card">
+               <div class="card-inner">
+                   <h3>MOST SPENDING</h3>
+               </div>
+            </div>                 
+        </div>
+
+        <div class="row1">
+         <div class="charts-card">
+           <h2 class="chart-title">Top 5 Expense Source</h2>
+           <div id="bar-chart"></div>
+         </div>
+         <div class="charts-card">
+             <h2 class="chart-title">Recent Expenses</h2>
+             <div id="expenses-card"></div>
+           </div>
+          
+       </div>
+
+       <div class="row2">
+         <div class="charts-card">
+           <h2 class="chart-title">Report Overview</h2>
+           <div id="donut-chart"></div>
+         </div>
+
+       <div class="charts-card">
+         <h2 class="chart-title">Expense Activity</h2>
+         <div id="area-chart"></div>
+       </div>
+       </div>
+       </main>
+   </div> 
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+ 
+    <!-- Custom JS -->
+    <script src="js/index.js"></script>
+  </body>
 </html>
